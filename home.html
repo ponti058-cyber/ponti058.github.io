@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Emily Pontinen</title>
+  <style>
+      :root {
+          --primary-color: #2563eb;
+          --secondary-color: #7c3aed;
+          --accent-color: #f59e0b;
+          --text-dark: #0d0d0d;
+          --text-light: #f7f8fa;
+          --background-light: #f9fafb;
+          --background-white: #ffffff;
+          --border-color: #e5e7eb;
+          --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+
+
+
+
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+
+
+
+      body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+          line-height: 1.6;
+          color: var(--text-dark);
+          background-color: var(--background-light);
+      }
+
+
+
+
+      /* Navigation */
+      .navbar {
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(10px);
+          border-bottom: 1px solid var(--border-color);
+          z-index: 1000;
+          transition: all 0.3s ease;
+      }
+
+
+
+
+      .nav-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 1rem 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+      }
+
+
+
+
+      .nav-links {
+          display: flex;
+          list-style: none;
+          gap: 2rem;
+      }
+
+
+
+
+      .nav-links a {
+          text-decoration: none;
+          color: var(--text-dark);
+          font-weight: 500;
+          transition: color 0.3s ease;
+      }
+
+
+
+
+      .nav-links a:hover {
+          color: var(--primary-color);
+      }
+
+
+
+
+      /* Main Content */
+      main {
+          padding-top: 80px;
+          max-width: 1200px;
+          margin: 0 auto;
+      }
+
+
+
+
+      .page-header {
+          text-align: center;
+          padding: 6rem 0 3rem;
+          background: url('images/wow.jpeg') no-repeat center center;
+          background-size: cover;
+          position: relative;
+          color: white;
+      }
+    
+      .page-header::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 1;
+      }
+    
+      .page-header h1 {
+          position: relative;
+          z-index: 2;
+      }
+
+
+
+
+      .page-header h1 {
+          font-size: clamp(2rem, 4vw, 3rem);
+          color: var(--text-light);
+          margin-bottom: 1rem;
+      }
+
+
+
+
+      .content-section {
+          padding: 2rem;
+          margin-bottom: 3rem;
+          background: var(--background-white);
+          border-radius: 8px;
+          box-shadow: var(--shadow);
+      }
+
+
+
+
+      .grid-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+          padding: 1rem;
+      }
+
+
+
+
+      .profile-section {
+          text-align: center;
+      }
+
+
+
+
+      .image-container {
+          border-radius: 8px;
+          overflow: hidden;
+          margin-bottom: 1.5rem;
+          box-shadow: var(--shadow);
+      }
+
+
+
+
+      .image-container img {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          height: auto;
+          transition: transform 0.3s ease;
+      }
+
+
+
+
+      .image-container img:hover {
+          transform: scale(1.02);
+      }
+
+
+
+
+      .text-content {
+          padding: 1rem;
+      }
+
+
+
+
+      .text-content h2 {
+          color: var(--text-dark);
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+      }
+
+
+
+
+      .video-container {
+          max-width: 800px;
+          margin: 0 auto;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: var(--shadow);
+      }
+
+
+
+
+      .hobby-card {
+          background: var(--background-white);
+          border-radius: 8px;
+          padding: 1rem;
+          box-shadow: var(--shadow);
+          transition: transform 0.3s ease;
+      }
+
+
+
+
+      .hobby-card:hover {
+          transform: translateY(-5px);
+          box-shadow: var(--shadow-lg);
+      }
+
+
+
+
+      .hobby-card h3 {
+          color: var(--primary-color);
+          margin: 1rem 0;
+      }
+
+
+
+
+      /* Footer */
+      footer {
+          background: var(--text-dark);
+          color: white;
+          text-align: center;
+          padding: 2rem;
+          margin-top: 3rem;
+      }
+
+
+
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+          .grid-container {
+              grid-template-columns: 1fr;
+          }
+        
+          .content-section {
+              padding: 1rem;
+          }
+        
+          .video-container {
+              width: 100%;
+          }
+      }
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <!-- Navigation Menu -->
+  <nav class="navbar">
+      <div class="nav-container">
+          <ul class="nav-links">
+              <li><a href="index.html">Welcome</a></li>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="hobbies.html">Hobbies</a></li>
+              <li><a href="discover.html">Discover</a></li>
+              <li><a href="resume.html">Resume</a></li>
+              <li><a href="career.html">Career</a></li>
+              <li><a href="game.html">Game</a></li>
+          </ul>
+      </div>
+  </nav>
+
+
+
+
+  <main>
+      <header class="page-header">
+          <h1>Home</h1>
+      </header>
+
+
+
+
+      <section class="content-section">
+          <div class="grid-container">
+              <div class="profile-section">
+                  <div class="image-container">
+                      <img src="images/mypic.jpg" alt="Professional Headshot of Emily Pontinen">
+                  </div>
+              </div>
+              <div class="text-content">
+                  <h2>Professional Introduction</h2>
+                  <p>Hello! I'm Emily Pontinen, a junior majoring in Finance at the University of Minnesota Duluth. I’ve always been fascinated by the global nature of business, and after graduating next year, I plan to pursue an MBA with a concentration in International Business. I’m especially interested in how different economies operate and collaborate across borders. With a strong attention to detail, a passion for working with numbers, and a deep curiosity about other cultures, I’m eager to build a career that blends finance with global business strategy. </p>
+              </div>
+          </div>
+      </section>
+
+
+
+
+      <section class="content-section">
+          <h2>Welcome Video/This is Me</h2>
+          <div class="video-container" style="max-width: 35%; margin: 0 auto;">
+              <video controls width="100%">
+                  <source src="videos/thisisme.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
+      </section>
+
+
+
+
+      <section class="content-section">
+          <h2>My Hobbies</h2>
+          <div class="grid-container">
+              <div class="hobby-card">
+                  <div class="image-container">
+                    
+                  </div>
+                  <img src="images/milfordsound.jpeg" alt="Hobby 1 traveling with my mom to Milford Sound" style="width: 60%; height: auto;">
+
+
+
+
+                  <h3>Traveling</h3>
+                  <p>I enjoy traveling and gaining new experiences. I took a GAP year this past year and traveled to many different places gaining a new perspective on the world around me. I definitely attracted the "travel-bug" and I can't wait to continue exploring the world!</p>
+              </div>
+              <div class="hobby-card">
+                  <div class="image-container">
+                    
+                  </div>
+                  <img src="images/mountainhiking.jpeg" alt="Hobby 2 Hiking to the top of my first 14er" style="width: 60%; height: auto;">
+
+
+
+
+                  <h3>Hiking</h3>
+                  <p>I love hiking and spending time outdoors whether that is with family, friends, or even solo. I especially love seeing new places while I hike and exploring different trails, waterfalls, countries, and so much more!</p>
+              </div>
+          </div>
+      </section>
+  </main>
+
+
+
+
+  <footer>
+      <p>&copy; 2025 Emily Pontinen. All rights reserved.</p>
+  </footer>
+
+
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

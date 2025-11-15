@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Welcome | Emily Pontinen</title>
+   <style>
+       :root {
+           --primary-color: #2563eb;
+           --secondary-color: #7c3aed;
+           --accent-color: #f59e0b;
+           --text-dark: #1f2937;
+           --text-light: #6b7280;
+           --background-light: #f9fafb;
+           --background-white: #ffffff;
+           --border-color: #e5e7eb;
+           --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+           --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+       }
+
+
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+
+       body {
+           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+           line-height: 1.6;
+           color: var(--text-dark);
+           background-color: var(--background-white);
+       }
+
+
+       /* Navigation */
+       .navbar {
+           position: fixed;
+           top: 0;
+           width: 100%;
+           background: rgba(255, 255, 255, 0.95);
+           backdrop-filter: blur(10px);
+           border-bottom: 1px solid var(--border-color);
+           z-index: 1000;
+           transition: all 0.3s ease;
+       }
+
+
+       .nav-container {
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: 1rem 2rem;
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+       }
+
+
+       .nav-links {
+           display: flex;
+           list-style: none;
+           gap: 2rem;
+       }
+
+
+       .nav-links a {
+           text-decoration: none;
+           color: var(--text-dark);
+           font-weight: 500;
+           transition: color 0.3s ease;
+       }
+
+
+       .nav-links a:hover {
+           color: var(--primary-color);
+       }
+
+
+       /* Hero Section */
+       .hero {
+           min-height: 100vh;
+           display: flex;
+           align-items: center;
+           background: url('images/wow.jpeg') no-repeat center center;
+           background-size: cover;
+           color: white;
+           text-align: center;
+           position: relative;
+           overflow: hidden;
+       }
+
+
+       .hero::before {
+           content: '';
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           background: rgba(0, 0, 0, 0.4);
+           z-index: 1;
+       }
+
+
+       .hero-content {
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 0 2rem;
+           position: relative;
+           z-index: 2;
+       }
+
+
+       .hero h1 {
+           font-size: clamp(2.5rem, 5vw, 4rem);
+           font-weight: 700;
+           margin-bottom: 1.5rem;
+           line-height: 1.2;
+       }
+
+
+       .hero p {
+           font-size: clamp(1.1rem, 2vw, 1.3rem);
+           margin-bottom: 2rem;
+           opacity: 0.9;
+           max-width: 600px;
+           margin-left: auto;
+           margin-right: auto;
+       }
+
+
+       .cta-buttons {
+           display: flex;
+           gap: 1rem;
+           justify-content: center;
+           flex-wrap: wrap;
+       }
+
+
+       .btn {
+           display: inline-block;
+           padding: 1rem 2rem;
+           border-radius: 50px;
+           text-decoration: none;
+           font-weight: 600;
+           transition: all 0.3s ease;
+           border: 2px solid transparent;
+       }
+
+
+       .btn-primary {
+           background: white;
+           color: var(--primary-color);
+       }
+
+
+       .btn-primary:hover {
+           transform: translateY(-2px);
+           box-shadow: var(--shadow-lg);
+       }
+
+
+       .btn-secondary {
+           background: transparent;
+           color: white;
+           border-color: white;
+       }
+
+
+       .btn-secondary:hover {
+           background: white;
+           color: var(--primary-color);
+       }
+
+
+       footer {
+           text-align: center;
+           padding: 2rem;
+           background: var(--text-dark);
+           color: white;
+       }
+
+
+       /* Responsive Design */
+       @media (max-width: 768px) {
+           .nav-container {
+               padding: 1rem;
+           }
+           .hero-content {
+               padding: 0 1rem;
+           }
+           .cta-buttons {
+               flex-direction: column;
+               align-items: center;
+           }
+       }
+   </style>
+</head>
+<body>
+   <nav class="navbar">
+       <div class="nav-container">
+           <ul class="nav-links">
+               <li><a href="index.html">Welcome</a></li>
+               <li><a href="home.html">Home</a></li>
+               <li><a href="hobbies.html">Hobbies</a></li>
+               <li><a href="discover.html">Discover</a></li>
+               <li><a href="resume.html">Resume</a></li>
+               <li><a href="career.html">Career</a></li>
+               <li><a href="game.html">Game</a></li>
+           </ul>
+       </div>
+   </nav>
+
+
+   <section class="hero">
+       <div class="hero-content">
+           <h1>Welcome to My Digital Portfolio</h1>
+           <p>I'm Emily Pontinen, and I'm a Junior Finance Major at the University of Minnesota Duluth. Welcome to my digital portfolio where you can get to know a bit about me and my aspirations!</p>
+           <div class="cta-buttons">
+               <a href="home.html" class="btn btn-primary">Explore Portfolio</a>
+               <a href="hobbies.html" class="btn btn-secondary">Get to Know Me</a>
+           </div>
+       </div>
+   </section>
+
+
+   <footer>
+       <p>&copy; 2025 Emily Pontinen. All rights reserved.</p>
+   </footer>
+
+
+   <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Emily Pontinen</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <style>
+        .download-btn {
+            display: inline-block;
+            background: white;
+            color: black;
+            border: 2px solid black;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+        
+        .resume-item {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--background-white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background: var(--background-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="career.html">Career</a></li>
+                <li><a href="game.html">Game</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <h1>Professional Resume</h1>
+        </header>
+
+        <section class="content-section">
+            <a href="media/resume.pdf" download class="download-btn">📄 Download PDF Resume</a>
+            <h2>Education</h2>
+            <div class="resume-item">
+                <h3>University of Minnesota Duluth</h3>
+                <p><strong>Bachelor of Science in Finance</strong></p>
+                <p>Expected Graduation: May 2027</p>
+
+                <h3>Minnesota North College</h3>
+                <p><strong>Associates of Arts Degree</strong></p>
+                <p>2022 - 2024</p>
+                <p>4.0 GPA</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Experience</h2>
+            <div class="resume-item">
+                <h3>Client Service Specialist - Park State Bank</h3>
+                <p><strong>June 2025 - Present</strong></p>
+                <ul>
+                    <li>Customer Service Skills</li>
+                    <li>Experience in the world of finance and banking</li>
+                    <li>Problem solving and attention to detail skills</li>
+                </ul>
+            </div>
+            <div class="resume-item">
+                <h3>Minnesota North College Bookstore Cashier & Employee</h3>
+                <p><strong>July 2024 - June 2025</strong></p>
+                <ul>
+                    <li>Work with money and a transaction processing system</li>
+                    <li>Work to solve problems</li>
+                    <li>Skills in efficiency and time management</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Microsoft Excel</li>
+                        <li>Transaction Processing Skills</li>
+                        <li>Customer Service</li>
+                        <li>Money Counting and Handling</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Determination</li>
+                        <li>Leadership</li>
+                        <li>Communication</li>
+                        <li>Time Management</li>
+                        <li>Teamwork</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Awards/Achievements</h2>
+            <div class="resume-item">
+                <ul>
+                    <li>Valedictorian of my highschool with a 4.0 GPA</li>
+                    <li>Academic Scholarship Recipient of the Lawrence A. Wallin Scholarship</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Emily Pontinen. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
